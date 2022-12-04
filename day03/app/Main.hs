@@ -10,16 +10,16 @@ main = do
     withFile "/home/david/code/haskell/adventofcode/2022/day03/input.txt" ReadMode (\handle -> do
         contents <- hGetContents handle 
         let textContents = contents
-        putStrLn $ show $ day2a textContents
-        putStrLn $ show $ day2b textContents)
+        putStrLn $ show $ day3a textContents
+        putStrLn $ show $ day3b textContents)
 
 
-day2a :: String -> Int
-day2a contents = sum $ map getPriority $ lines contents
+day3a :: String -> Int
+day3a contents = sum $ map getPriority $ lines contents
 
 
-day2b :: String -> Int
-day2b contents = sum $ map getBadgePriority $ chunksOf 3 $ lines contents
+day3b :: String -> Int
+day3b contents = sum $ map getBadgePriority $ chunksOf 3 $ lines contents
 
 
 getPriority :: String -> Int
